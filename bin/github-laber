@@ -44,8 +44,8 @@ if (configOpt.value) {
     configOpt.value = Abs(configOpt.value);
 }
 
-function addLabels() {
-    var labeller = GitHubLaber(labels, {
+function addLabels(labels) {
+    var labeller = GitHubLaber(labels || [], {
         source: importOpt.value
       , repo: repoOpt.value
       , token: tokenOpt.value
@@ -57,9 +57,9 @@ function addLabels() {
     });
     labeller.on("added", function (owner, repo, label, err, data) {
         if (err) {
-            return Logger.log(new Error("Failed to add label " + label.name + " to " + owner + "/" + repo + ". " + err.message));
+            return Logger.log(new Error("Failed to add label " + label.name + " to " + owner + "/" + repo + ". " + (err.message || err)));
         }
-        Logger.log("Added " + label.name + " to " + owner + "/" + repo + ". " + err.message);
+        Logger.log("Added " + label.name + " to " + owner + "/" + repo + ".");
     });
 }
 
@@ -69,5 +69,5 @@ if (configOpt.value) {
         addLabels(labels);
     });
 } else {
-    addLabels(labels);
+    addLabels();
 }
