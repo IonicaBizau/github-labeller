@@ -35,5 +35,9 @@
     "r-json": "^1.0.0",
     "same-time": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "blah": {
+    "h_img": "http://i.imgur.com/T59a7rb.png",
+    "ex_img": "http://i.imgur.com/jpELj6R.png"
+  }
 }
