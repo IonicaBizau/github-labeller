@@ -1,0 +1,24 @@
+{
+  "name": "gh-labels",
+  "version": "1.0.0",
+  "description": "Automaticall create issue labels in your GitHub projects.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/gh-labels.git"
+  },
+  "keywords": [
+    "github",
+    "labels",
+    "automatization"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/gh-labels/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/gh-labels#readme"
+}
