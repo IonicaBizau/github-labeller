@@ -1,5 +1,5 @@
 {
-  "name": "gh-labels",
+  "name": "github-laber",
   "version": "1.0.0",
   "description": "Automaticall create issue labels in your GitHub projects.",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IonicaBizau/gh-labels.git"
+    "url": "git+ssh://git@github.com/IonicaBizau/github-laber.git"
   },
   "keywords": [
     "github",
@@ -18,7 +18,7 @@
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/gh-labels/issues"
+    "url": "https://github.com/IonicaBizau/github-laber/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/gh-labels#readme"
+  "homepage": "https://github.com/IonicaBizau/github-laber#readme"
 }
