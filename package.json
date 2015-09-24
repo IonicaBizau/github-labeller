@@ -1,7 +1,7 @@
 {
   "name": "github-laber",
   "version": "1.0.0",
-  "description": "Automaticall create issue labels in your GitHub projects.",
+  "description": "Automagically create issue labels in your GitHub projects.",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
