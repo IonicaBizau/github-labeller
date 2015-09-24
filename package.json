@@ -1,14 +1,17 @@
 {
-  "name": "github-laber",
+  "name": "github-labeller",
   "version": "1.0.0",
   "description": "Automagically create issue labels in your GitHub projects.",
   "main": "lib/index.js",
+  "bin": {
+    "github-labeller": "./bin/github-labeller"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IonicaBizau/github-laber.git"
+    "url": "git+ssh://git@github.com/IonicaBizau/github-labeller.git"
   },
   "keywords": [
     "github",
@@ -16,9 +19,21 @@
     "automatization"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
-  "license": "MIT",
+  "license": "KINDLY",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/github-laber/issues"
+    "url": "https://github.com/IonicaBizau/github-labeller/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/github-laber#readme"
+  "homepage": "https://github.com/IonicaBizau/github-labeller#readme",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "abs": "^1.0.0",
+    "bug-killer": "^4.0.0",
+    "clp": "^3.0.0",
+    "gh.js": "^2.2.0",
+    "r-json": "^1.0.0",
+    "same-time": "^2.0.0"
+  },
+  "devDependencies": {}
 }

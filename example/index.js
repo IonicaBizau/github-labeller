@@ -1,8 +1,8 @@
 // Dependencies
-var GitHubLaber = require("../lib");
+var GitHubLabeller = require("../lib");
 
 // Provide the token and some info
-var laber = GitHubLaber([
+var labeller = GitHubLabeller([
     {
         color: "#4aa3df"
       , name: "Some blue label"
@@ -17,6 +17,6 @@ var laber = GitHubLaber([
     console.log(data);
 });
 
-laber.on("added", function (label, err, data) {
-    console.log(label, err || data);
+labeller.on("added", function (owner, repo, label, err, data) {
+    console.log(label, owner + "/" + repo);
 });
