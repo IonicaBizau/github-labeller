@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+
+// Dependencies
+var GitHubLaber = require("../lib")
+  , Logger = require("bug-killer")
+  , Clp = require("clp")
+  , Package = require("../package")
+  , Abs = require("abs")
+  , ReadJson = require("r-json")
+  ;
+
+// Parse the command line arguments
+var repoOpt = new Clp.Option(["r", "repo"], "The repository full name (e.g. ionicabizau/github-laber) or the username.", "user(/repo)")
+  , tokenOpt = new Clp.Option(["t", "token"], "The GitHub token.", "token")
+  , configOpt = new Clp.Option(["c", "config"], "The configuration file (a JSON file containing an array like this: [{ \"color\": \"#4aa3df\", \"name\": \"Some label name\" }]).", "path")
+  , importOpt = new Clp.Option(["i", "import"], "Import labels from a specific repository.", "user/repository")
+  , parser = new Clp({
+        name: Package.name
+      , version: Package.version
+      , exe: Package.name
+      , examples: [
+            "github-laber -r ionicabizau/github-laber -t some-token -c my-labels.json"
+          , "github-laber -r ionicabizau -i jlord/git-it-electron -t some-token"
+        ]
+      , docs_url: Package.homepage
+      , process: true
+    }, [
+        repoOpt
+      , tokenOpt
+      , configOpt
+      , importOpt
+    ])
+  ;
+
+if (!configOpt.is_provided && !importOpt.is_provided) {
+    return console.log(parser.displayHelp());
+}
+
+if (!tokenOpt.is_provided) {
+    return Logger.log(new Error("The token is mandatory."));
+}
+
+if (configOpt.value) {
+    configOpt.value = Abs(configOpt.value);
+}
+
+function addLabels() {
+    var labeller = GitHubLaber(labels, {
+        source: importOpt.value
+      , repo: repoOpt.value
+      , token: tokenOpt.value
+    }, function (err) {
+        if (err) {
+            return Logger.log(err);
+        }
+        Logger.log("Done.");
+    });
+    labeller.on("added", function (owner, repo, label, err, data) {
+        if (err) {
+            return Logger.log(new Error("Failed to add label " + label.name + " to " + owner + "/" + repo + ". " + err.message));
+        }
+        Logger.log("Added " + label.name + " to " + owner + "/" + repo + ". " + err.message);
+    });
+}
+
+if (configOpt.value) {
+    ReadJson(configOpt.value, function (err, labels) {
+        if (err) { return Logger.log(err); }
+        addLabels(labels);
+    });
+} else {
+    addLabels(labels);
+}
