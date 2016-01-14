@@ -1,8 +1,8 @@
 [![github-labeller](http://i.imgur.com/T59a7rb.png)](#)
 
-# `$ github-labeller` [![Support this project][donate-now]][paypal-donations]
+# `$ github-labeller` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/github-labeller.svg)](https://www.npmjs.com/package/github-labeller) [![Downloads](https://img.shields.io/npm/dt/github-labeller.svg)](https://www.npmjs.com/package/github-labeller) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
-Automagically create issue labels in your GitHub projects.
+> Automagically create issue labels in your GitHub projects.
 
 [![github-labeller](http://i.imgur.com/jpELj6R.png)](#)
 
