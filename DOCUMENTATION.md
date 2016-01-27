@@ -18,7 +18,7 @@ specified account.
 - **EventEmitter** An event emitter you can use for listening for specific events:
  - `added` (owner, repo, label, err, data)–after a label was created
 
-### `addToRepo(ev, gh, owner, repo, label, callback)`
+### `addToRepo(ev, gh, owner, repo, label, labels, callback)`
 Creates a new label.
 
 #### Params
@@ -27,8 +27,8 @@ Creates a new label.
 - **String** `owner`: The owner username.
 - **String** `repo`: The repository name.
 - **Object** `label`: The label object.
+- **Array** `labels`: Labels to patch instead of post.
 - **Function** `callback`: Callback function
 
 #### Return
 - **Request** The request object.
-
