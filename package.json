@@ -19,6 +19,10 @@
     "automatization"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "contributors": [
+    "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/github-labeller/issues"
