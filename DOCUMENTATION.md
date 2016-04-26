@@ -1,4 +1,5 @@
 ## Documentation
+
 You can see below the API reference of this module.
 
 ### `GitHubLabeller(labels, options, callback)`
@@ -18,7 +19,21 @@ specified account.
 - **EventEmitter** An event emitter you can use for listening for specific events:
  - `added` (owner, repo, label, err, data)–after a label was created
 
-### `addToRepo(ev, gh, owner, repo, label, labels, callback)`
+### `checkRepo(ev, gh, owner, repo, label, callback)`
+Check the current labels, then post or patch new ones.
+
+#### Params
+- **EventEmitter** `ev`: The event emitter instance.
+- **GitHub** `gh`: The `gh.js` instance.
+- **String** `owner`: The owner username.
+- **String** `repo`: The repository name.
+- **Object** `label`: The label object.
+- **Function** `callback`: Callback function
+
+#### Return
+- **Request** The request object.
+
+### `addToRepo(ev, gh, owner, repo, label, label, callback)`
 Creates a new label.
 
 #### Params
@@ -27,8 +42,9 @@ Creates a new label.
 - **String** `owner`: The owner username.
 - **String** `repo`: The repository name.
 - **Object** `label`: The label object.
-- **Array** `labels`: Labels to patch instead of post.
+- **Array** `label`: The list of current labels.
 - **Function** `callback`: Callback function
 
 #### Return
 - **Request** The request object.
+

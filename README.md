@@ -1,3 +1,4 @@
+
 [![github-labeller](http://i.imgur.com/T59a7rb.png)](#)
 
 # `$ github-labeller` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/github-labeller.svg)](https://www.npmjs.com/package/github-labeller) [![Downloads](https://img.shields.io/npm/dt/github-labeller.svg)](https://www.npmjs.com/package/github-labeller) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
@@ -6,30 +7,33 @@
 
 [![github-labeller](http://i.imgur.com/jpELj6R.png)](#)
 
-## Installation
+## :cloud: Installation
 
 You can install the package globally and use it as command line tool:
+
 
 ```sh
 $ npm i -g github-labeller
 ```
 
+
 Then, run `github-labeller --help` and see what the CLI tool can do.
 
-```sh
+
+```
 $ github-labeller --help
 Usage: github-labeller [options]
 
 Options:
-  -r, --repo <user(/repo)>        The repository full name (e.g.                   
-                                  ionicabizau/github-labeller) or the username.    
-  -t, --token <token>             The GitHub token.                                
+  -r, --repo <user(/repo)>        The repository full name (e.g.
+                                  ionicabizau/github-labeller) or the username.
+  -t, --token <token>             The GitHub token.
   -c, --config <path>             The configuration file (a JSON file containing an
-                                  array like this: [{ "color": "#4aa3df", "name":  
-                                  "Some label name" }]).                           
-  -i, --import <user/repository>  Import labels from a specific repository.        
-  -h, --help                      Displays this help.                              
-  -v, --version                   Displays version information.                    
+                                  array like this: [{ "color": "#4aa3df", "name":
+                                  "Some label name" }]).
+  -i, --import <user/repository>  Import labels from a specific repository.
+  -h, --help                      Displays this help.
+  -v, --version                   Displays version information.
 
 Examples:
   github-labeller -r ionicabizau/github-labeller -t some-token -c my-labels.json
@@ -38,13 +42,16 @@ Examples:
 Documentation can be found at https://github.com/IonicaBizau/github-labeller#readme
 ```
 
-## Example
+## :clipboard: Example
+
 
 Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
 
 ```sh
 $ npm i --save github-labeller
 ```
+
+
 
 ```js
 // Dependencies
@@ -71,17 +78,15 @@ labeller.on("added", function (owner, repo, label, err, data) {
 });
 ```
 
-## Documentation
+## :memo: Documentation
 
 For full API reference, see the [DOCUMENTATION.md][docs] file.
 
-## How to contribute
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
 
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
