@@ -18,6 +18,9 @@ You can install the package globally and use it as command line tool:
 $ npm i -g github-labeller
 ```
 
+You also need to get a GitHub application token. Go here: https://github.com/settings/tokens. Click on "Generate New Token". Because you will be setting labels for repositories, you will need to add the `repo` scopes. Name the token something informative: `github-labeller` is a good name.
+
+If you would like to use this label more than once, save it somewhere in your `.bash_profile` or `.bashrc` files. These are normally hidden in your root directory.
 
 Then, run `github-labeller --help` and see what the CLI tool can do.
 
