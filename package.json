@@ -42,7 +42,13 @@
   "devDependencies": {},
   "blah": {
     "h_img": "http://i.imgur.com/T59a7rb.png",
-    "ex_img": "http://i.imgur.com/jpELj6R.png"
+    "ex_img": "http://i.imgur.com/jpELj6R.png",
+    "installation": {
+        "p": [
+            "You also need to get a GitHub application token. Go here: https://github.com/settings/tokens. Click on <kbd>Generate New Token</kbd>. Because you will be setting labels for repositories, you will need to add the `repo` scopes. Name the token something informative: `github-labeller` is a good name.",
+            "If you would like to use this label more than once, save it somewhere in your `.bash_profile` or `.bashrc` files. These are normally hidden in your root directory."
+        ]
+    }
   },
   "files": [
     "bin/",
