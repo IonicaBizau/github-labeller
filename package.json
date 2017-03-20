@@ -1,6 +1,6 @@
 {
   "name": "github-labeller",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "Automagically create issue labels in your GitHub projects.",
   "main": "lib/index.js",
   "bin": {
@@ -18,7 +18,7 @@
     "labels",
     "automatization"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "contributors": [
     "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
@@ -54,12 +54,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
