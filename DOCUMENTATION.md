@@ -7,6 +7,7 @@ Adds the provided labels to specified repository or to all repositories from
 specified account.
 
 #### Params
+
 - **Array** `labels`: An array of objects like this:
 - **Object** `options`: An object containing the following fields:
  - `repo` (String): A string like `"user/repository"` or `"user"`–in this case
@@ -23,6 +24,7 @@ specified account.
 Check the current labels, then post or patch new ones.
 
 #### Params
+
 - **EventEmitter** `ev`: The event emitter instance.
 - **GitHub** `gh`: The `gh.js` instance.
 - **String** `owner`: The owner username.
@@ -37,6 +39,7 @@ Check the current labels, then post or patch new ones.
 Creates a new label.
 
 #### Params
+
 - **EventEmitter** `ev`: The event emitter instance.
 - **GitHub** `gh`: The `gh.js` instance.
 - **String** `owner`: The owner username.
