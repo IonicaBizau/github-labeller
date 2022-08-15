@@ -58,7 +58,7 @@ You can install the package globally and use it as command line tool:
 
 ```sh
 # Using npm
-npm install --global github-labeller
+npm install --location=global github-labeller
 
 # Using yarn
 yarn global add github-labeller
